@@ -1,0 +1,12 @@
+.bookRow {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.bookRow > h2{
+    margin-bottom: 0;
+}
+
+.bookRow > h3{
+    margin-top: 0.3em;
+}

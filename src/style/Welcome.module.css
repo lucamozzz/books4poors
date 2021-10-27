@@ -1,0 +1,7 @@
+.container > h2{
+    padding-top: 2em;
+}
+
+.container > p{
+    padding: 0 2em;
+}

@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+}
+
+.content > form{
+  padding-bottom: 2em;
+}
+
+.content > button{
+
+}

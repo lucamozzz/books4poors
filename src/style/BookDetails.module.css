@@ -1,0 +1,31 @@
+.container{
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > h2{
+    margin-bottom: 0.2em;
+}
+
+.container > h3{
+    margin-top: 0;
+}
+
+.container > h4{
+    margin-top: 3em;
+    margin-bottom: 0.3em;
+}
+
+.container > h6{
+    margin: 0;
+}
+
+.container > p{
+    padding: 0 2em;
+}
+
+.container > img{
+    padding: 0 2em;
+}
