@@ -5,7 +5,9 @@ import FooterCSS from '../style/Footer.module.css';
 export const Footer = () => {
     return (
         <footer className={FooterCSS.container}>
-            <FaGithub />
+            <a href="https://github.com/motsiiih" target="_blank" rel="noreferrer">
+                <FaGithub />
+            </a>
             <p>Luca Mozzoni - 2021</p>
         </footer>
     )

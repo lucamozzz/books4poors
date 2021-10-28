@@ -1,3 +1,11 @@
 .container{
     padding-top: 2em;
 }
+
+a{
+    color: inherit;
+}
+
+p{
+    margin-top: 0.1em;
+}
