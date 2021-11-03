@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setBooks } from '../store/actions/bookActions';
 
+const object = require('lodash/object');
 const axios = require('axios');
-const path = `https://www.googleapis.com/books/v1/volumes?filter=free-ebooks&projection=LITE&key=${process.env.REACT_APP_API_KEY}&q=`;
+const path = `https://www.googleapis.com/books/v1/volumes?filter=full&projection=LITE&orderBy=relevance&maxResults=40&key=${process.env.REACT_APP_API_KEY}&q=intitle:`;
 
 const Searchbar = () => {
     const dispatch = useDispatch();
@@ -12,12 +13,12 @@ const Searchbar = () => {
         try {
             e.preventDefault();
             const response = await axios(path + text);
-            if (response.status === 200)
-                dispatch(setBooks(response.data.items))
-            return false;
+            if (response.status === 200 && text !== '') {
+                dispatch(setBooks(object.get(response, 'data.items', [])));
+            }
+            else dispatch(setBooks([]));
         } catch (err) {
-            console.error(err)
-            return false;
+            console.error(err);
         }
     }
 

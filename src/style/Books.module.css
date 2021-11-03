@@ -1,0 +1,15 @@
+.container{
+    margin-top: 3em;
+    min-height: 100vh;
+}
+
+.sadFace{
+    font-size: 3em;
+    margin-top: 2em;
+    margin-bottom: 0.1em;
+}
+
+.sadHands{
+    font-size: 1.5em;
+    margin-top: 0.1em;
+}
