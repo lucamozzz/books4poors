@@ -1,13 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 body {
-  text-align: center;
-  background-color: #282c34;
-  color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    background-color: #282c34;
+    color: white;
 }
 
-.content > form{
-  padding-bottom: 2em;
+header {
+    background-color: tomato;
+    transform: rotate(3deg);
+    min-width: 100%;
 }
 
-.content > button{
+button {
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
+h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.money {
+    font-size: 1.3em;
 }

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setBooks } from '../store/actions/bookActions';
+import { Link } from 'react-router-dom';
 
 const object = require('lodash/object');
 const axios = require('axios');
-const path = `https://www.googleapis.com/books/v1/volumes?filter=full&projection=LITE&orderBy=relevance&maxResults=40&key=${process.env.REACT_APP_API_KEY}&q=intitle:`;
+const path = `https://www.googleapis.com/books/v1/volumes?filter=full&filter=free-ebooks&projection=LITE&orderBy=relevance&maxResults=40&key=${process.env.REACT_APP_API_KEY}&q=intitle:`;
 
 const Searchbar = () => {
     const dispatch = useDispatch();

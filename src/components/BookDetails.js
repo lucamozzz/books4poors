@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { setBooks } from '../store/actions/bookActions';
 import BookDetailsCSS from '../style/BookDetails.module.css';
+import { Link } from 'react-router-dom';
 
 const axios = require('axios');
 const object = require('lodash/object');
 
 export const BookDetails = ({ match }) => {
-    const [book, setBook] = useState({});
-    useEffect(() => {
-        fetchBook();
-    }, []);
 
     const fetchBook = async () => {
         try {
@@ -21,23 +17,24 @@ export const BookDetails = ({ match }) => {
         }
     }
 
+    const [book, setBook] = useState({});
+    useEffect(() => {
+        fetchBook();
+    });
+
     return (
-        <div className={BookDetailsCSS.container}>
+        < div className={BookDetailsCSS.container} >
+            <Link to='/books' style={{ textDecoration: 'none' }}>
+                <button>Go back</button>
+            </Link>
             <h2>{object.get(book, 'volumeInfo.title', 'Unknown Title')}</h2>
             <h3>{object.get(book, 'volumeInfo.authors', 'Unknown Authors')}</h3>
-            <img src={object.get(book, 'volumeInfo.imageLinks.thumbnail')} alt="book_cover" />
+            <img src={object.get(book, 'volumeInfo.imageLinks.thumbnail', '')} alt="not available" />
             <h6>{object.get(book, 'volumeInfo.publisher', '')}</h6>
             <h6>{object.get(book, 'volumeInfo.publishedDate', '')}</h6>
             <h4>Description</h4>
             <p>{object.get(book, 'volumeInfo.description', 'Unknown description')}</p>
-            {/* <img src={object.get(book, 'imageLinks.thumbnail', { title: 'Unknown title' })} alt="Book cover" />
-            <h2>{object.get(book, 'title', { title: 'Unknown title' })}</h2>
-            <h3>{object.get(book, 'authors', { authors: 'Unknown authors' })}</h3>
-            <h6>{object.get(book, 'publisher', { publisher: 'Unknown publisher' })}</h6>
-            <h6>{object.get(book, 'publishedDate', { publishedDate: 'Unknown publishedDate' })}</h6>
-            <h4>Description</h4>
-            <p>{object.get(book, 'description', { description: 'Unknown description' })}</p> */}
-        </div>
+        </div >
     );
 }
 

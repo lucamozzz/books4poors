@@ -6,7 +6,7 @@ export const Book = (props) => {
         <div className={BookCSS.bookRow} key={props.id}>
             <h2>{props.title}</h2>
             <h3>{props.authors}</h3>
-            <img src={props.thumbnail} alt="Book cover" />
+            <img src={props.thumbnail} alt="not available" />
         </div>
     )
 }

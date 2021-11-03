@@ -11,8 +11,8 @@ function App() {
       <div className="App">
         <div className="content">
           <header>
-            <Link to='/'>
-              <h1>Books4Poors</h1>
+            <Link to='/' style={{ textDecoration: 'none' }}>
+              <h1>Books4Poors <span className='money'>💸</span></h1>
             </Link>
           </header>
           <Switch>
@@ -22,7 +22,7 @@ function App() {
           </Switch>
           <Footer />
         </div>
-      </div >
+      </div>
     </Router>
   );
 }
