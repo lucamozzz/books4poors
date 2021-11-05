@@ -9,9 +9,10 @@ export const BookDetails = ({ match }) => {
 
     const fetchBook = async () => {
         try {
-            const response = await axios(`https://www.googleapis.com/books/v1/volumes/${match.params.id}`);
+            const response = await fetch(`/.netlify/functions/book-details?id=${match.params.id}`);
+            const data = response.json();
             if (response.status === 200)
-                setBook(response.data);
+                setBook(object.get(data, 'items', 'unknown item'));
         } catch (err) {
             console.error(err);
         }

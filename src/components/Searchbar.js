@@ -4,8 +4,6 @@ import { setBooks } from '../store/actions/bookActions';
 import SearchbarCSS from '../style/Searchbar.module.css';
 
 const object = require('lodash/object');
-const axios = require('axios');
-const path = `https://www.googleapis.com/books/v1/volumes?filter=full&filter=free-ebooks&projection=LITE&orderBy=relevance&maxResults=40&key=${process.env.REACT_APP_API_KEY}&q=intitle:`;
 
 const Searchbar = () => {
     const dispatch = useDispatch();
@@ -13,9 +11,10 @@ const Searchbar = () => {
     const fetchBooks = async (e, text) => {
         try {
             e.preventDefault();
-            const response = await axios(path + text);
+            const response = await fetch(`/.netlify/functions/book-search?key=${text}`);
+            const data = await response.json();
             if (response.status === 200 && text !== '') {
-                dispatch(setBooks(object.get(response, 'data.items', [])));
+                dispatch(setBooks(object.get(data, 'items', [])));
             }
             else dispatch(setBooks([]));
         } catch (err) {
