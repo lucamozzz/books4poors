@@ -1,29 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     background-color: #282c34;
     color: white;
 }
 
+.content{
+    margin-top: 3em;
+}
+
 header {
+    margin: 0 auto;
     background-color: tomato;
     transform: rotate(3deg);
-    min-width: 100%;
+    max-width: 20em;
+    border-radius: 2em;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+input::placeholder{
+    opacity: 60%;
 }
 
 button {
-    font-family: 'Roboto Condensed', sans-serif;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 2em 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #FFFFFF;
+    border-color: tomato;
+    background-color: tomato;
+    text-align: center;
+    transition: all 0.2s;
 }
+
+button :hover {
+    color: tomato;
+    border-color: white;
+    background-color: #FFFFFF;
+}
+
 
 h1 {
     font-family: 'Righteous', cursive;
     font-size: 2.2em;
+    color: white;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 h3 {
@@ -32,4 +71,38 @@ h3 {
 
 .money {
     font-size: 1.3em;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .content{
+        margin-top: 5em;
+    }
+
+    header {
+        max-width: 40em;
+        border-radius: 5em;
+    }
+
+    button {
+        border-radius: 2em;
+        font-size: 3em;
+    }
+
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 2.5em;
+    }
+
+    .money {
+        font-size: 1.3em;
+    }
 }

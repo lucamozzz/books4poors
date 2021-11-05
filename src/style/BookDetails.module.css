@@ -1,31 +1,68 @@
 .container{
-    padding-top: 3em;
+    padding: 1em 1em 0 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container > h2{
+h2{
+    padding: 0 3em;
     margin-bottom: 0.2em;
 }
 
-.container > h3{
+.authors{
+    font-style: italic;
     margin-top: 0;
+    margin-bottom: 0.5em;
 }
 
-.container > h4{
-    margin-top: 3em;
+h4{
+    margin-top: 2em;
     margin-bottom: 0.3em;
 }
 
-.container > h6{
+h6{
+    margin: 0.3em 0;
+}
+
+p{
+    padding: 0 2em;
+}
+
+img{
+    padding: 1em 2em;
+    width: 12em;
+    height: auto;
+}
+
+button{
     margin: 0;
+    margin-bottom: 1em;
+    font-size: 0.9em;
 }
 
-.container > p{
-    padding: 0 2em;
-}
+@media only screen and (min-width: 768px) {
 
-.container > img{
-    padding: 0 2em;
+    h4{
+        font-size: 1.5em;
+    }
+
+    h6{
+        font-size: 1em;
+    }
+
+    img{
+        width: 16em;
+        height: auto;
+    }
+    
+    button{
+        cursor: pointer;
+        font-size: 1.4em;
+    }   
+
+    p{
+        font-size: 1.3em;
+        padding: 0 12em 5em 12em;
+    }
 }

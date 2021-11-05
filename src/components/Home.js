@@ -12,17 +12,19 @@ export const Home = () => {
     });
 
     return (
-        <div className={HomeCSS.container}>
+        <div className={HomeCSS.container} >
             <h2>Welcome!</h2>
-            <h3>
-                If you're broke and also a reader, <br />you're in the right place!
-            </h3>
-            <h3 className={HomeCSS.emoji_1}>🤗</h3>
-            <Link to='/books' style={{ textDecoration: 'none' }}>
-                <button className={HomeCSS.startButton}>
-                    Start reading!
-                </button>
-            </Link>
+            <h3>Wanna save on reading? <br />You're in the right place!</h3>
+            <h3 className={HomeCSS.emoji}>🤗</h3>
+            <div>
+                <Link to='/about' style={{ textDecoration: 'none' }}>
+                    <button className={HomeCSS.aboutButton}>?</button>
+                </Link>
+                <Link to='/books' style={{ textDecoration: 'none' }}>
+                    <button className={HomeCSS.startButton}>Start reading!</button>
+                </Link>
+            </div>
+            <h4></h4>
         </div>
     )
 }

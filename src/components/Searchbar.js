@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setBooks } from '../store/actions/bookActions';
-import { Link } from 'react-router-dom';
+import SearchbarCSS from '../style/Searchbar.module.css';
 
 const object = require('lodash/object');
 const axios = require('axios');
@@ -24,19 +24,20 @@ const Searchbar = () => {
     }
 
     return (
-        <>
+        <div className={SearchbarCSS.container}>
             <form action="">
                 <input
                     type="text"
                     id="header-search"
+                    className={SearchbarCSS.inputText}
                     placeholder="Search for books..."
                     name="s"
                     onChange={e => setText(e.target.value)}
                 />
-                <button onClick={(e) => fetchBooks(e, text)}>Search</button>
+                <button className={SearchbarCSS.searchButton} onClick={(e) => fetchBooks(e, text)}>Search</button>
             </form>
-        </>
-    )
+        </div>
+    );
 }
 
 export default Searchbar;

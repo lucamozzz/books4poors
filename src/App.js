@@ -1,8 +1,8 @@
 import './style/App.css';
-import Books from './components/Books';
 import Home from './components/Home';
-import Footer from './components/Footer';
+import Books from './components/Books';
 import BookDetails from './components/BookDetails';
+import About from './components/About';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route exact path='/books' component={Books} />
             <Route path='/books/:id' component={BookDetails} />
+            <Route path='/about' component={About} />
           </Switch>
-          <Footer />
         </div>
       </div>
     </Router>

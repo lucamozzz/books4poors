@@ -23,24 +23,27 @@ const Books = () => {
                         <h3>Retry using different keywords!</h3>
                         <h3 className={BooksCSS.emoji_1}>🥺</h3>
                         <h3 className={BooksCSS.emoji_2}>👉👈</h3>
-                    </div>) :
-                    books.map(book => {
-                        let id = book.id;
-                        let { title, authors } = get(book, 'volumeInfo', { title: 'Unknown title', authors: 'Unknown authors' });
-                        let { smallThumbnail } = get(book, 'volumeInfo.imageLinks', '');
-                        return (
-                            <Link style={{ textDecoration: 'none' }} to={`/books/${id}`}>
-                                <Book
-                                    key={id}
-                                    title={
-                                        title.length > 50 ?
-                                            title.slice(0, 50) + '...' :
-                                            title}
-                                    authors={authors}
-                                    thumbnail={smallThumbnail} />
-                            </Link>
-                        );
-                    })
+                    </div>) : (
+                    <div className={BooksCSS.books}>
+                        {books.map(book => {
+                            let id = book.id;
+                            let { title, authors } = get(book, 'volumeInfo', { title: 'Unknown title', authors: 'Unknown authors' });
+                            let { smallThumbnail } = get(book, 'volumeInfo.imageLinks', '');
+                            return (
+                                <Link style={{ textDecoration: 'none' }} to={`/books/${id}`}>
+                                    <Book
+                                        key={id}
+                                        title={
+                                            title.length > 50 ?
+                                                title.slice(0, 50) + '...' :
+                                                title}
+                                        authors={authors}
+                                        thumbnail={smallThumbnail} />
+                                </Link>
+                            );
+                        })}
+                    </div>
+                )
             ) : (
                 <div>
                     <h2>Help me help you!</h2>

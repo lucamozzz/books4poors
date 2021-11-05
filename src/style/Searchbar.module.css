@@ -1,0 +1,35 @@
+.inputText {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.1em;
+    max-width: 18em;
+    color: black;
+    width: 100%;
+    border: none;
+    border-radius: 2rem;
+    text-indent: 0.5em;
+  }
+  
+  .inputText::placeholder {
+    color: inherit;
+  }
+  
+  .inputText:focus {
+    outline: none;
+  }
+
+  .searchButton {
+    margin: 1.5em 0.3em 0.3em 0.7em;
+    font-size: 0.9em;
+}
+
+@media only screen and (min-width: 768px) {
+  .inputText {
+    display: inline;
+    font-size: 2em;
+  }
+
+  .searchButton {
+    font-size: 1.5em;
+  }
+}

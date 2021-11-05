@@ -4,8 +4,31 @@
 
 .bookRow > h2{
     margin-bottom: 0;
+    font-size: 2em;
 }
 
 .bookRow > h3{
     margin-top: 0.3em;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.bookCover {
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .bookRow > h2{
+        width: 10em;
+        font-size: 2em;
+    }
+    
+    .bookCover {
+        transition: transform .5s ease;
+        margin-top: 0.8em;
+    }
+
+    .bookCover:hover {
+        transform: scale(1.25);
+    }
 }
