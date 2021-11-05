@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import BookDetailsCSS from '../style/BookDetails.module.css';
 import { Link } from 'react-router-dom';
 
-const axios = require('axios');
 const object = require('lodash/object');
 
 export const BookDetails = ({ match }) => {

@@ -6,7 +6,7 @@ const handler = async (event) => {
     const url = `https://www.googleapis.com/books/v1/volumes?filter=full&filter=free-ebooks&projection=LITE&orderBy=relevance&maxResults=40&key=${API_KEY}&q=intitle:`;
     try {
         const { data } = await axios(url + key);
-
+        console.log(data);
         return {
             statusCode: 200,
             body: JSON.stringify(data)
