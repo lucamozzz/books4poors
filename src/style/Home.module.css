@@ -26,7 +26,6 @@ p {
     font-size: 1.5em;
     padding-left: 0.7em;
     padding-right: 0.7em;
-    opacity: 70%;
     margin-right: 0.5em;
 }
 
@@ -42,9 +41,5 @@ p {
     
     .aboutButton{
         font-size: 2.5em;
-    }
-
-    .aboutButton:hover{
-        opacity: 100%;
     }
 } 
