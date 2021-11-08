@@ -26,13 +26,12 @@ const Books = () => {
                     </div>) : (
                     <div className={BooksCSS.books}>
                         {books.map(book => {
-                            let id = book.id;
                             let { title, authors } = get(book, 'volumeInfo', { title: 'Unknown title', authors: 'Unknown authors' });
                             let { smallThumbnail } = get(book, 'volumeInfo.imageLinks', '');
                             return (
-                                <Link style={{ textDecoration: 'none' }} to={`/books/${id}`}>
+                                <Link key={book.id} style={{ textDecoration: 'none' }} to={`/books/${book.id}`}>
                                     <Book
-                                        key={id}
+                                        key={book.id}
                                         title={
                                             title.length > 50 ?
                                                 title.slice(0, 50) + '...' :

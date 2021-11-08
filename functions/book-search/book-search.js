@@ -3,10 +3,9 @@ const axios = require("axios");
 const handler = async (event) => {
     const { key } = event.queryStringParameters;
     const API_KEY = process.env.REACT_APP_API_KEY;
-    const url = `https://www.googleapis.com/books/v1/volumes?filter=full&filter=free-ebooks&projection=LITE&orderBy=relevance&maxResults=40&key=${API_KEY}&q=intitle:`;
+    const url = `https://www.googleapis.com/books/v1/volumes?filter=full&filter=free-ebooks&projection=LITE&orderBy=relevance&maxResults=40&key=${API_KEY}&q=intitle:${key}`;
     try {
-        const { data } = await axios(url + key);
-        console.log(data);
+        const { data } = await axios(url);
         return {
             statusCode: 200,
             body: JSON.stringify(data)

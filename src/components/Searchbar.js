@@ -13,7 +13,7 @@ const Searchbar = () => {
             e.preventDefault();
             const response = await fetch(`/.netlify/functions/book-search?key=${text}`);
             const data = await response.json();
-            if (response.status === 200 && text !== '') {
+            if (text !== '') {
                 dispatch(setBooks(object.get(data, 'items', [])));
             }
             else dispatch(setBooks([]));

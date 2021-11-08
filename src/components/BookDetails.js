@@ -9,9 +9,9 @@ export const BookDetails = ({ match }) => {
     const fetchBook = async () => {
         try {
             const response = await fetch(`/.netlify/functions/book-details?id=${match.params.id}`);
-            const data = response.json();
+            const data = await response.json();
             if (response.status === 200)
-                setBook(object.get(data, 'items', 'unknown item'));
+                setBook(data);
         } catch (err) {
             console.error(err);
         }
@@ -20,7 +20,7 @@ export const BookDetails = ({ match }) => {
     const [book, setBook] = useState({});
     useEffect(() => {
         fetchBook();
-    });
+    }, []);
 
     const downloadEpub = () => {
         if (object.get(book, 'accessInfo.epub.isAvailable', false))
