@@ -43,7 +43,7 @@ export const BookDetails = ({ match }) => {
             </Link>
             <h2>{object.get(book, 'volumeInfo.title', 'Unknown Title')}</h2>
             <img src={object.get(book, 'volumeInfo.imageLinks.thumbnail', '')} alt="not available" />
-            <h3 className={BookDetailsCSS.authors}>{object.get(book, 'volumeInfo.authors', 'Unknown Authors')}</h3>
+            <h3>Written by <br /><span className={BookDetailsCSS.authors}>{object.get(book, 'volumeInfo.authors', 'Unknown Authors')}</span></h3>
             <h6>{object.get(book, 'volumeInfo.publisher', '')}</h6>
             <h6>{object.get(book, 'volumeInfo.publishedDate', '')}</h6>
             {downloadEpub()}

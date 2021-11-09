@@ -1,5 +1,4 @@
 .container {
-    min-height: 100vh;
     margin: 0 1em 0 1em;
 }
 
@@ -13,7 +12,7 @@ p {
 
 .emoji {
     font-size: 5em;
-    margin-top: 0.7em;
+    margin-top: 0.4em;
     margin-bottom: 0;
 }
 

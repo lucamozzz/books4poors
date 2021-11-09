@@ -1,26 +1,33 @@
 .bookRow {
-    padding: 2em;
+    padding: 2em 0;
 }
 
 .bookRow > h2{
-    margin-bottom: 0;
+    margin: 0 auto;
     font-size: 2em;
 }
 
 .bookRow > h3{
-    margin-top: 0.3em;
+    margin: 0.3em auto;
     font-size: 1.3em;
     font-style: italic;
+    max-width: 15em;
 }
 
 .bookCover {
+    width: 10em;
+    height: auto;
     margin-top: 0;
 }
 
 @media only screen and (min-width: 768px) {
     .bookRow > h2{
         width: 10em;
-        font-size: 2em;
+        font-size: 1.5em;
+    }
+
+    .bookRow > h3{
+        font-size: 1.1em;
     }
     
     .bookCover {
