@@ -11,8 +11,8 @@ HTTP requests handled by Axios.
 ## Deploy
 This app was deployed on Netlify, check it out: https://books4poors.netlify.app
 
-## How to run
-Download the repo and run <code>npm run build && serve -s build</code> to see it in action (in order to function correctly, you'll have to set your own api key in a .env file).
+## How to run locally
+Download the repo and run <code>npm i && netlify dev</code> to see it in action on your machine <br>(in order to function correctly, you'll have to set your own <code>REACT_APP_API_KEY</code> environment variabile in a file called <code>.env</code>).
 
 
 ## License
