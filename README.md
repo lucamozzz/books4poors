@@ -4,7 +4,7 @@
 Books4Poors is a simple React App that allows you to look for free ebooks. Data is retrieved using the Google Books API.
 
 ## Technologies
-This app was made using ReactJS and Redux.</br>
+This app was made using ReactJS, React Router and Redux.</br>
 Styled using CSS modules.</br>
 HTTP requests handled by Axios.
 
